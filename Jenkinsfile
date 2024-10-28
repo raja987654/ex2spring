@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Generate Backend image') {
             steps {
-                dir('ex3sprin') {
+                dir('ex2spring') { // Change from 'ex3sprin' to 'ex2spring'
                     bat 'mvn clean install'
                     bat 'docker build -t docex1-spring .'
                 }
@@ -24,10 +24,11 @@ pipeline {
         }
         stage('Run Docker Compose') {
             steps {
-                dir('ex3sprin') {
+                dir('ex2spring') { // Ensure this is consistent as well
                     bat 'docker compose up -d'
                 }
             }
         }
     }
 }
+
