@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  backend:
+    image: docex1-spring
+    container_name: spring-backend
+    ports:
+      - "8083:8080"  # Host port 8083 mapped to container port 8080
