@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Clone repo') {
             steps {
-                bat 'git clone https://github.com/raja987654/ex3sprin.git'
+                bat 'git clone https://github.com/raja987654/ex2spring.git'
             }
         }
         stage('Generate Backend image') {
